@@ -58,23 +58,6 @@ public class Bombero {
 		this.rango = rango;
 	}
     
-	public Rango elegirRango(int valor) {
-		switch(valor) {
-		case 1:
-			setRango (BOMBERO);
-			return rango;
-		case 2:
-			setRango (CABO);
-			return rango;
-		case 3:
-			setRango (SUBOFICIAL);
-			return rango;
-		case 4:
-			setRango(OFICIAL);
-			return rango;
-		}
-		return rango;
-	}
 
     //Override
 	  @Override
