@@ -16,7 +16,10 @@ public class Parque {
 		this.bomberos = new LinkedList<Bombero>();
 		this.avisos = new LinkedList<String>();
 	}
-
+	
+	public void addBombero(Bombero b) {
+		bomberos.add(b);
+	}
 	public int getIdParque() {
 		return idParque;
 	}
@@ -42,6 +45,11 @@ public class Parque {
 			 System.out.println("No hay avisos");
 		 else
 			 System.out.println(avisos);
+	 }
+	 
+	 public void deleteAviso() {
+		if(!this.avisos.isEmpty())
+		this.avisos.removeFirst();
 	 }
 	 
 	

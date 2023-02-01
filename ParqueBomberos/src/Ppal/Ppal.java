@@ -74,7 +74,10 @@ public class Ppal {
 				case 2:
 					
 					System.out.println("-- LISTAR PARQUES --");
-					System.out.println(parques);
+					for (int i = 0; i < parques.size(); i++) {
+						System.out.println((i + 1) + " - " + parques.get(i).getUbicacion());
+					}
+					
 					break;
 					
 				case 3:
@@ -84,10 +87,10 @@ public class Ppal {
 					String nombreCompleto = strings.next();
 					System.out.print("Introduce la edad: ");
 					int edad = enteros.nextInt();
-					System.out.println("Seleccione un rango: "
+					System.out.println("Seleccione un rango (1-4): "
 							+ "1. BOMBERO 2. CABO 3. SUBOFICIAL 4. OFICIAL");
 					int r = enteros.nextInt();
-					Rango rango;
+					Rango rango = null;
 					switch(r) {
 						case 1: 
 							rango = Rango.BOMBERO;
@@ -114,10 +117,53 @@ public class Ppal {
 					
 					for (int i = 0; i < parques.size(); i++) {
 						if(parques.get(i).getIdParque() == parque) {
-							
+							parques.get(parque).addBombero(new Bombero(idB, nombreCompleto, edad, rango));
+							System.out.println("Bombero creado");
+							idB++;
 						}
 					}
+					break;
+				case 4:
+					System.out.println("A continuación se mostraran los "
+							+ "parques disponibles que a los que se puede añadir el "
+							+ "aviso.");
+					System.out.println(parques);
+					System.out.println("Selecciona el parque: ");
+					parque = enteros.nextInt();
+					System.out.print("Introduce el aviso: ");
+					parques.get(parque).addAviso(strings.next());
+					System.out.println("Aviso agregado correctamente");
 					
+					break;
+				case 5:
+					System.out.println("A continuación se mostraran los "
+							+ "parques disponibles ");
+					System.out.println(parques);
+					System.out.println("Selecciona el id del parque: ");
+					parque = enteros.nextInt();
+					
+					for (int i = 0; i < parques.size(); i++) {
+						if(parques.get(i).getIdParque() == parque) 						
+							parques.get(i).mostrarAviso();
+					}
+					break;
+				case 6:
+					System.out.println("A continuación se mostraran los "
+							+ "parques disponibles ");
+					System.out.println(parques);
+					System.out.println("Selecciona el id del parque: ");
+					parque = enteros.nextInt();
+					
+					for (int i = 0; i < parques.size(); i++) {
+						if(parques.get(i).getIdParque() == parque) {
+							parques.get(i).deleteAviso();
+						}
+							
+					}
+					break;
+				case 7:
+					System.out.println("Saliendo...");
+					break;
 				default:
 					System.out.println("ERROR: OPCIÓN NO DISPONIBLE");
 			}
