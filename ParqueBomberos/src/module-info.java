@@ -5,5 +5,5 @@
  * @author Pedro Lazaro
  *
  */
-module ParqueBomberos {
+module VideoClub {
 }
