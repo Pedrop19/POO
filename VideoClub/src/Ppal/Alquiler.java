@@ -1,15 +1,16 @@
 package Ppal;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Alquiler {
 	private int id_alquiler;
 	private Persona persona;
-	private Date fecha_inicio;
+	private LocalDate fecha_inicio;
 	private Date fecha_fin;
 	private Peliculas_Series pel_ser;
 	
-	public Alquiler(int id_alquiler, Persona persona, Date fecha_inicio, Date fecha_fin, Peliculas_Series pel_ser) {
+	public Alquiler(int id_alquiler, Persona persona, LocalDate fecha_inicio, Date fecha_fin, Peliculas_Series pel_ser) {
 		
 		this.id_alquiler = id_alquiler;
 		this.persona = persona;
@@ -38,13 +39,15 @@ public class Alquiler {
 		this.persona = persona;
 	}
 
-	public Date getFecha_inicio() {
+	public LocalDate getFecha_inicio() {
 		return fecha_inicio;
 	}
 
-	public void setFecha_inicio(Date fecha_inicio) {
+
+	public void setFecha_inicio(LocalDate fecha_inicio) {
 		this.fecha_inicio = fecha_inicio;
 	}
+
 
 	public Date getFecha_fin() {
 		return fecha_fin;
