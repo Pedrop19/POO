@@ -1,15 +1,15 @@
 package Ppal;
 
-import java.sql.Date;
+import java.util.Date;
 
-public class Alquileres {
+public class Alquiler {
 	private int id_alquiler;
 	private Persona persona;
 	private Date fecha_inicio;
 	private Date fecha_fin;
 	private Peliculas_Series pel_ser;
 	
-	public Alquileres(int id_alquiler, Persona persona, Date fecha_inicio, Date fecha_fin, Peliculas_Series pel_ser) {
+	public Alquiler(int id_alquiler, Persona persona, Date fecha_inicio, Date fecha_fin, Peliculas_Series pel_ser) {
 		
 		this.id_alquiler = id_alquiler;
 		this.persona = persona;
@@ -65,7 +65,7 @@ public class Alquileres {
 	@Override
 	public boolean equals(Object obj) {
 		  boolean result = false;
-	      Alquileres a = (Alquileres) obj;
+	      Alquiler a = (Alquiler) obj;
 	      if(this.id_alquiler == a.getId_alquiler())
 	    	  result = true;
 	      return result;

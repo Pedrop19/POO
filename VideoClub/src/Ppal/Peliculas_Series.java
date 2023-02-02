@@ -1,6 +1,5 @@
 package Ppal;
 
-import java.util.LinkedList;
 
 public class Peliculas_Series {
 	
@@ -9,9 +8,10 @@ public class Peliculas_Series {
 	private String nombre_director;
 	private Categoria categoria;
 	
-	public Peliculas_Series(int idPel_Ser, String titulo, Categoria categoria) {
+	public Peliculas_Series(int idPel_Ser, String titulo, String nombre_director, Categoria categoria) {
 		this.idPel_Ser = idPel_Ser;
 		this.titulo = titulo;
+		this.nombre_director = nombre_director;
 		this.categoria = categoria;
 	}
 

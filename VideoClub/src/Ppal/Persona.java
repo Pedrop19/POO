@@ -1,5 +1,7 @@
 package Ppal;
 
+import java.util.LinkedList;
+
 public class Persona {
     //1. Atributos
     private String dni;
@@ -8,8 +10,6 @@ public class Persona {
     private int telefono;
     private String email;
     private String direccion;
-
-
     
     //2. Métodos
     //2.1 Constructor/es  
@@ -24,6 +24,7 @@ public class Persona {
     }
     
     //2.2 Otros
+
 
     public String getDni() {
         return dni;
