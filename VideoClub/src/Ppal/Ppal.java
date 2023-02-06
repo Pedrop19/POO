@@ -10,6 +10,7 @@ import java.time.Period;
 import java.time.temporal.ChronoUnit;
 
 public class Ppal {
+	
 	public static void main(String[] args) {
 		Menu();
 	}
@@ -48,7 +49,7 @@ public class Ppal {
 				NuevoAlquiler(personas, alquileres, pel_ser);
 				break;
 			case 3:
-				FinAlquiler(alquileres);
+				FinAlquiler(personas, alquileres, pel_ser);
 				break;
 			case 4:
 				ListarAlquileres(alquileres);
@@ -150,26 +151,37 @@ public class Ppal {
 		System.out.println("Alquiler Creado");
 	}
 
-	public static void FinAlquiler(LinkedList<Alquiler> alquileres) {
+	public static void FinAlquiler(LinkedList<Persona> personas, LinkedList<Alquiler> alquileres, LinkedList<Peliculas_Series> pel_sers) {
 
 		Scanner strings = new Scanner(System.in);
 		Scanner enteros = new Scanner(System.in);
-
-		System.out.println("-- FIN ALQUILER --");
-		System.out.println("A continuación se mostraran los " + "alquileres activos.");
-		System.out.println(alquileres);
-		System.out.println("Introduce el id del alquiler a eliminar");
-		int id = enteros.nextInt();
-		for (int i = 0; i < alquileres.size(); i++) {
-			if (alquileres.get(i).getId_alquiler() == id) {
-				alquileres.remove(i);
-			}
-		}
+		
+		System.out.println("A continuación se mostraran las " + "personas disponibles");
+		ListarClientes(personas);
+		System.out.println("Introduce el dni de la persona: ");
+		String dni = strings.next();
+		if (personas.isEmpty())
+			RegistrarCliente(personas);
+		for (int i = 0; i < personas.size(); i++)
+			if (personas.get(i).getDni().equals(dni))
+				for (int j = 0; j < alquileres.size(); j++)
+					if(alquileres.get(j).getPersona() == personas.get(i))
+						for (int k = 0; k < pel_sers.size(); k++) {
+							System.out.println("ID de Alquiler: " + (i) + " - " + 
+												"Titulo de pelicula: " + pel_sers.get(k).getTitulo());
+							System.out.println("Introduce el id del alquiler a borrar: ");
+							int id_alq = enteros.nextInt();
+							if(alquileres.get(j).getId_alquiler() == id_alq)
+								alquileres.remove(j);
+						}
+		
 		System.out.println("Alquiler Eliminado");
 	}
 
 	public static void ListarAlquileres(LinkedList<Alquiler> alquileres) {
+		
 		System.out.println("-- LISTA DE ALQUILERES --");
+		
 		for (int i = 0; i < alquileres.size(); i++) {
 			System.out.println("ID: " + (i + 1) + " - " + "Fecha de inicio: " + alquileres.get(i).getFecha_inicio()
 					+ " - " + "Fecha a devolver: " + alquileres.get(i).getFecha_fin());
@@ -185,7 +197,8 @@ public class Ppal {
 		String titulo;
 		String nombre_director;
 		Categoria categoria;
-
+		
+		System.out.println("-- NUEVA PELICULA/SERIE --");
 		System.out.print("Introduce el titulo de la pelicula/serie: ");
 		titulo = strings.next();
 		System.out.print("Introduce el nombre del director: ");
@@ -228,6 +241,7 @@ public class Ppal {
 	}
 
 	public static void ListarClientes(LinkedList<Persona> personas) {
+		
 		System.out.println("-- LISTA DE CLIENTES --");
 		for (int i = 0; i < personas.size(); i++) {
 			System.out.println("Número de Cliente: " + (i + 1) + " - " + "DNI: " + personas.get(i).getDni());
@@ -235,9 +249,11 @@ public class Ppal {
 	}
 
 	public static void ListarPel_Sers(LinkedList<Peliculas_Series> pel_sers) {
+		
 		System.out.println("-- LISTA DE PELICULAS/SERIES --");
 		for (int i = 0; i < pel_sers.size(); i++) {
 			System.out.println("ID: " + (i) + " - " + "Título: " + pel_sers.get(i).getTitulo());
 		}
 	}
+	
 }
