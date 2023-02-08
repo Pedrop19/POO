@@ -127,9 +127,6 @@ public class Ppal {
 		} catch (ParseException e) {
 			System.out.println("Formato no valido");
 		}
-		System.out.println("A continuación se mostraran las " + "personas disponibles a las que se puede añadir el "
-				+ "alquiler a crear.");
-		ListarClientes(personas);
 		System.out.println("Introduce el dni de la persona: ");
 		String dni = strings.next();
 		System.out.println("A continuación se mostraran las " + "peliculas o series disponibles para alquilar.");
