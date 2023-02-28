@@ -63,7 +63,7 @@ public class Ppal {
 								if(reponedores.get(j).getId() == reponedor) {
 									reponedores.get(reponedor).descargarCamion(camiones.get(camion), productosSupermercado);
 								for (int h = 0; h < productosSupermercado.size(); h++) {
-									productosSupermercado.get(h).setPrecio(productosSupermercado.get(i).getPrecio() + (productosSupermercado.get(i).getPrecio()*0.1));
+									productosSupermercado.get(h).setPrecio(productosSupermercado.get(h).getPrecio() + (productosSupermercado.get(h).getPrecio()*0.1));
 								}
 							}
 						}
