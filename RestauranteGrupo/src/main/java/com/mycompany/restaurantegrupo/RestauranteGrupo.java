@@ -25,6 +25,6 @@ public class RestauranteGrupo {
             System.out.println("9. MOSTRAR AVISO DEL ALMACEN");
             System.out.println("10. VENTA DE PLATO");
             System.out.println("11. SALIR");
-        }while(opc !=11);
+        }while(opc !=11);k
     }
 }
