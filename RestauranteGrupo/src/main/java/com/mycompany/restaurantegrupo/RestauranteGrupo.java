@@ -29,7 +29,7 @@ public class RestauranteGrupo {
         }while(opc !=9);
     }
 
-    //System.out.println("9. VENTA DE PLATO");
+    //System.out.println("8. VENTA DE PLATO");
     public void VentaPlato (LinkedList<Plato> platos){
     	Scanner enteros = new Scanner(System.in);
                 
