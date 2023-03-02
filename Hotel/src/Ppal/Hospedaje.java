@@ -3,11 +3,11 @@ package Ppal;
 public class Hospedaje {
 	
 	private Cliente persona;
-	private int n_hab;
+	private Habitacion n_hab;
 		
-	public Hospedaje(Cliente persona, int n_hab) {
+	public Hospedaje(Cliente persona, Habitacion habitacionElegida) {
 		this.persona = persona;
-		this.n_hab = n_hab;
+		this.n_hab = habitacionElegida;
 	}
 	
 	public Cliente getPersona() {
@@ -16,10 +16,10 @@ public class Hospedaje {
 	public void setPersona(Cliente persona) {
 		this.persona = persona;
 	}
-	public int getN_hab() {
+	public Habitacion getN_hab() {
 		return n_hab;
 	}
-	public void setN_hab(int n_hab) {
+	public void setN_hab(Habitacion n_hab) {
 		this.n_hab = n_hab;
 	}
 
