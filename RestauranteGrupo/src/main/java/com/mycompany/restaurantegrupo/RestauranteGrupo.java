@@ -1,17 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
 
-package com.mycompany.restaurantegrupo;
-
-/**
- *
- * @author mmarq
- */
 public class RestauranteGrupo {
 	
-    public static void main(String[] args) {
+	public static void main(String[] args) {
+		
+        LinkedList<Plato> platos = new LinkedList<Plato>();
+
         int opc = 0;
         do{
             System.out.println("1. AÑADIR EMPLEADO"); //MANUELF
@@ -26,4 +19,19 @@ public class RestauranteGrupo {
             System.out.println("10. SALIR");
         }while(opc !=11);
     }
+	
+
+    //System.out.println("9. VENTA DE PLATO");
+    public void Venta (){
+        System.out.println("--- VENTA DE PLATO ---");
+        System.out.println("A continuación se mostrará una lista de los platos disponibles: ")
+
+    }
+
+	public static void MostrarPlatos(LinkedList<Plato> platos) {
+		System.out.println("-- LISTA DE CLIENTES --");
+		for (int i = 0; i < platos.size(); i++) {
+			System.out.println("Número de Cliente: " + (i + 1) + " - " + "DNI: " + personas.get(i).getDni());
+		}
+	}
 }
