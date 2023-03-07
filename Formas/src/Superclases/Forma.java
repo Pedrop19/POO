@@ -3,11 +3,11 @@ package Superclases;
 import Clases.*;
 
 public abstract class Forma {
-	
+
 	public String color;
 	public String nombre;
 	public Punto centro;
-	
+
 	public Forma(String color, String nombre, Punto centro) {
 		super();
 		this.color = color;
@@ -37,6 +37,10 @@ public abstract class Forma {
 
 	public void setCentro(Punto centro) {
 		this.centro = centro;
+	}
+
+	public double area() {
+		return 0;
 	}
 
 }

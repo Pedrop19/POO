@@ -3,7 +3,7 @@ package Clases;
 import Superclases.Forma;
 
 public class Rectangulo extends Forma {
-	
+
 	public double lado_menor;
 	public double lado_mayor;
 
@@ -34,14 +34,14 @@ public class Rectangulo extends Forma {
 		return "Rectangulo [lado_menor=" + lado_menor + ", lado_mayor=" + lado_mayor + super.toString();
 	}
 
-	public double area(double lado_menor, double lado_mayor) {
+	public double area() {
 		return lado_menor * lado_mayor;
 	}
-	
-	public double perimetro(double lado_menor, double lado_mayor) {
-		return ((2*lado_menor) * (2*lado_mayor));
+
+	public double perimetro() {
+		return ((2 * lado_menor) * (2 * lado_mayor));
 	}
-	
+
 	public void cambiarEscala(double escala) {
 		setLado_mayor(getLado_mayor() + getLado_mayor() * escala);
 	}
