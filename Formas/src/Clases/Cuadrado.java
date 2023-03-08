@@ -3,14 +3,17 @@ package Clases;
 public class Cuadrado extends Rectangulo {
 
 	public Cuadrado(String color, String nombre, Punto centro, double lado) {
-		super(color, nombre, centro, lado, 0);
+		super(color, nombre, centro, lado, lado);
 	}
 
-	@Override
-	public double area() {
-		return getLado_menor() * getLado_menor();
+	public double getLado(){
+		return super.getLado_mayor();
 	}
 
+	public void setLado(double lado){
+		super.setLado_mayor(lado);
+		super.setLado_menor(lado);
+	}
 	
 	@Override
 	public String toString() {
