@@ -7,14 +7,14 @@ public class Circulo extends Elipse {
 	}
 
 	public double getRadio(){
-		return super.getRadio_menor();
+		return getRadio_menor();
 	}
 
 	public void setRadio(double radio){
-		super.setRadio_mayor(radio);
-		super.setRadio_menor(radio);
+		setRadio_mayor(radio);
+		setRadio_menor(radio);
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Circulo [radio=" + radio_mayor + ", nombre=" + nombre + "]";

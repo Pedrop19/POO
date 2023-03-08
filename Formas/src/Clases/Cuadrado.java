@@ -7,12 +7,12 @@ public class Cuadrado extends Rectangulo {
 	}
 
 	public double getLado(){
-		return super.getLado_mayor();
+		return getLado_mayor();
 	}
 
 	public void setLado(double lado){
-		super.setLado_mayor(lado);
-		super.setLado_menor(lado);
+		setLado_mayor(lado);
+		setLado_menor(lado);
 	}
 	
 	@Override

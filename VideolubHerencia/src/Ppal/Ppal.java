@@ -3,7 +3,6 @@ package Ppal;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-import Ppal.Categoria;
 import personas.Persona;
 
 public class Ppal {
@@ -16,7 +15,6 @@ public class Ppal {
 		LinkedList<Persona> personas = new LinkedList<Persona>();
 		LinkedList<Productos> productos = new LinkedList<Productos>();
 		LinkedList<Alquiler> alquileres = new LinkedList<Alquiler>();
-
 	}
 
 }
