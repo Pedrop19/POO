@@ -39,8 +39,10 @@ public abstract class Forma {
 		this.centro = centro;
 	}
 
-	public double area() {
-		return 0;
-	}
+	public abstract double area();
 
+	@Override
+	public String toString() {
+		return "Forma [Color =" + color + ", Nombre =" + nombre + ", Centro = " + centro + "]";
+	}
 }

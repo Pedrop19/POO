@@ -44,7 +44,7 @@ public class Ppal {
                 maxArea = lista.get(j);
             formaMaxima = formas.get(j);
         }
-        
+
         System.out.println("El area maxima de la lista de formas es: " + maxArea +
                 "Y pertenece a: " + formaMaxima.getNombre());
     }

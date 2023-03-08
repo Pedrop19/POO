@@ -6,6 +6,7 @@ public class Circulo extends Elipse {
 		super(color, nombre, centro, radio, 0);
 	}
 
+	@Override
 	public double area() {
 		return 3.14 * (getRadio_mayor() * getRadio_mayor());
 	}

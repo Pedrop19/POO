@@ -29,6 +29,7 @@ public class Elipse extends Forma {
 		this.radio_menor = radio_menor;
 	}
 
+	@Override
 	public double area() {
 		return 3.14 * (radio_mayor * radio_menor);
 	}

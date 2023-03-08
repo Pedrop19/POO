@@ -6,6 +6,7 @@ public class Cuadrado extends Rectangulo {
 		super(color, nombre, centro, lado, 0);
 	}
 
+	@Override
 	public double area() {
 		return getLado_menor() * getLado_menor();
 	}
