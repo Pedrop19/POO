@@ -1,7 +1,5 @@
 package Clases;
 
-import java.sql.Date;
-
 import Enums.Est_Civil;
 import SuperClases.Empleado;
 
@@ -10,7 +8,7 @@ public class Profesor extends Empleado {
 
     private String departamento;
 
-    public Profesor(String nombre, String apellidos, String dNI, Est_Civil est_Civil, Date anio_incorporacion,
+    public Profesor(String nombre, String apellidos, String dNI, Est_Civil est_Civil, int anio_incorporacion,
             int n_despacho, String departamento) {
         super(nombre, apellidos, dNI, est_Civil, anio_incorporacion, n_despacho);
         this.departamento = departamento;
@@ -26,7 +24,7 @@ public class Profesor extends Empleado {
 
     @Override
     public String toString() {
-        return "Profesor [" + super.toString() + "departamento=" + departamento + "]";
+        return "Profesor" + "\n" +super.toString() + "\ndepartamento: " + departamento;
     }
 
 }

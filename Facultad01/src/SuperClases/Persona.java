@@ -47,7 +47,7 @@ public abstract class Persona<Est_Civil> {
 
     @Override
     public String toString() {
-        return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", DNI=" + DNI + ", est_Civil=" + est_Civil
-                + "]";
+        return "nombre: " + nombre + "\napellidos: " + apellidos + "\nDNI: " + DNI + "\nest_Civil: " + est_Civil
+                ;
     }
 }
