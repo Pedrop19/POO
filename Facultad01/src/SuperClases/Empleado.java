@@ -17,7 +17,6 @@ public abstract class Empleado extends Persona {
     public int getAnio_incorporacion() {
         return anio_incorporacion;
     }
-
     public void setAnio_incorporacion(int anio_incorporacion) {
         this.anio_incorporacion = anio_incorporacion;
     }
