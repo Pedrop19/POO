@@ -26,15 +26,15 @@ public class Ppal {
             personas.get(i).entrenar();
         }
         
-        System.out.println("Afiliado_01");
+        System.out.println("Afiliado_01 Sesiones");
         System.out.println(afiliado_01.getSesiones());
-        System.out.println("Afiliado_02");
+        System.out.println("Afiliado_02 Sesiones");
         System.out.println(afiliado_02.getSesiones());
-        System.out.println("Monitor_01");
+        System.out.println("Monitor_01 Experiencia");
         System.out.println(monitor_01.getExperiencia());
-        System.out.println("Monitor_02");
+        System.out.println("Monitor_02 Experiencia");
         System.out.println(monitor_02.getExperiencia());
-        System.out.println("Monitor_03");
+        System.out.println("Monitor_03 Experiencia");
         System.out.println(monitor_03.getExperiencia());
 
         afiliado_01.cargarBono();
