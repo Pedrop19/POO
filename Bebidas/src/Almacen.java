@@ -26,6 +26,9 @@ public class Almacen {
         estanterias.add(e);
     }
 
+    public int tamanoProducto(int i){
+        return estanterias.get(i).getProductos().size();
+    }
     /*
      * Calcular el precio de todas las bebidas: calcula el precio total de todos los
      * productos del almacén.
@@ -33,7 +36,7 @@ public class Almacen {
     public double precioTotal() {
         double preTo = 0;
         for (int i = 0; i < estanterias.size(); i++) {
-            for (int j = 0; j < estanterias.get(i).getProductos().size(); j++) {
+            for (int j = 0; j < tamanoProducto(i); j++) {
                 preTo += estanterias.get(i).getProductos().get(j).getPrecio();
             }
         }
@@ -47,7 +50,7 @@ public class Almacen {
     public double precioMarca(String marca) {
         double preMa = 0;
         for (int i = 0; i < estanterias.size(); i++) {
-            for (int j = 0; j < estanterias.get(i).getProductos().size(); j++) {
+            for (int j = 0; j < tamanoProducto(i); j++) {
                 if (estanterias.get(i).getProductos().get(j).getMarca().equals(marca))
                     preMa += estanterias.get(i).getProductos().get(j).getPrecio();
             }
@@ -63,7 +66,7 @@ public class Almacen {
         double preEst = 0;
         for (int i = 0; i < estanterias.size(); i++) {
             if (estanterias.get(i).getId() == id_Estanteria) {
-                for (int j = 0; j < estanterias.get(id_Estanteria).getProductos().size(); j++) {
+                for (int j = 0; j < tamanoProducto(id_Estanteria); j++) {
                     preEst += estanterias.get(id_Estanteria).getProductos().get(j).getPrecio();
                 }
             }
@@ -104,7 +107,7 @@ public class Almacen {
     public void removeProducto(int id) {
         boolean existe = false;
         int i = 0;
-        while (i < estanterias.get(i).getProductos().size() && !existe) {
+        while (i < tamanoProducto(i) && !existe) {
             if (estanterias.get(i).getProductos().get(i).getId() == id) {
                 estanterias.get(i).removeProducto(estanterias.get(i).getProductos().get(id));
                 existe = true;
@@ -119,7 +122,7 @@ public class Almacen {
     /* Mostrar información: mostrar para cada bebida toda su información */
     public void imprimir() {
         for (int i = 0; i < estanterias.size(); i++) {
-            for (int j = 0; j < estanterias.get(i).getProductos().size(); j++) {
+            for (int j = 0; j < tamanoProducto(i); j++) {
                 System.out.println(estanterias.get(i).getProductos().get(j).toString());
             }
         }
